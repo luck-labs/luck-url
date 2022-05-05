@@ -1,0 +1,48 @@
+[http_server]
+addr = ":8801"
+read_timeout = 50
+max_conn = 100
+handler_timeout = 8000
+idle_timeout = 60000
+
+[rpc_server]
+addr = "localhost:8808"
+max_total = 500
+max_idle = 200
+min_idle = 100
+read_timeout = 5000
+idle_timeout = 60000
+
+[mysql]
+dsn = "root:123456@(localhost:3306)/sp_passport?timeout=5000ms&readTimeout=5000ms&writeTimeout=5000ms&charset=utf8&parseTime=true&loc=Local"
+connect_timeout = 50000
+metrics_enable = true
+conn_max_lifetime = 6000
+max_idle_conns = 20
+max_open_conns = 20
+shard = 1000
+
+[redis]
+addrs = ["localhost:6379"]
+auth = ""
+pool_size = 20
+max_con = 100
+conn_timeout = 10
+read_timeout = 20
+write_timeout = 20
+
+[log]
+info_log_path = "/var/log/luck-url-go/om.info.log"
+error_log_path = "/var/log/luck-url-go/om.error.log"
+log_format = ".%Y%m%d%H"
+
+[pprof]
+addr = "0.0.0.0:8809"
+
+[short_url]
+base_prefix = "http://luck-url-go.cc/"
+
+[snowflake]
+time_length = 36
+sequence_length = 4
+machine_length = 3
