@@ -1,0 +1,89 @@
+.title {
+  background: rgb(121, 242, 157);
+}
+
+.headerContainer {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 8px 24px -2px rgba(0, 0, 0, .05);
+
+  .headerContent {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .right {
+      display: flex;
+    }
+  }
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  .slogan {
+    margin-top: 80px;
+    color: #303659;
+    font-weight: 300;
+    line-height: 56px;
+    margin-bottom: 32px;
+    font-size: 40px;
+  }
+
+  .domainContainer {
+    display: flex;
+    width: 600px;
+    margin-top: 20px;
+  }
+
+  .urlResult {
+    width: 600px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #dce3f2;
+    border-radius: 5px;
+
+    .resultContent {
+      display: flex;
+
+      .qrCodeImg {
+        width: 100px;
+        height: 100px;
+        margin-left: -13px;
+      }
+
+      .defaultImg {
+        width: 75px;
+        height: 75px;
+        margin: 15px 15px 15px 0;
+      }
+
+      .urlContent {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+
+        .shortUrl {}
+
+        .originUrl {
+          color: gray;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          /*文字超出宽度则显示ellipsis省略号*/
+          text-overflow: ellipsis;
+          word-break: break-word;
+        }
+      }
+    }
+  }
+}
